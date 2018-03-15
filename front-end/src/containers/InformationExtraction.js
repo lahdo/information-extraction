@@ -8,18 +8,30 @@ import Info from "../components/Info";
 import Documents from "../components/Documents";
 import Upload from "../components/Upload";
 import Results from "../components/Results";
+import Spinner from "../components/Spinner";
 
 
 export default class AppsView extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {};
+        this.state = {
+            document: '',
+            showResults: false,
+            showSpinner: false,
+        };
+
+        this.setSpinner = this.setSpinner.bind(this);
+    }
+
+    setSpinner(value) {
+        this.setState({"showSpinner": value});
     }
 
     render() {
         return (
-            <div >
+            <div>
+                <Spinner showSpinner={ this.state.showSpinner }/>
                 <Grid>
                     <Row>
                         <Col md={12} mdOffset={0}>
@@ -33,18 +45,24 @@ export default class AppsView extends Component {
                     </Row>
                     <Row>
                         <Col md={12} mdOffset={0}>
-                            <Upload />
+                            <Upload
+                                setSpinner={ this.setSpinner }
+                            />
                         </Col>
                     </Row>
                     <Row>
                         <Col md={8} mdOffset={0}>
-                            <Results />
+                            <Results
+                                showResults={ this.state.showResults }
+                            />
                         </Col>
                     </Row>
 
                     <Row>
                         <Col md={8} mdOffset={0}>
-                            <ModelMetrics />
+                            <ModelMetrics
+                                showResults={ this.state.showResults }
+                            />
                         </Col>
                     </Row>
                 </Grid>

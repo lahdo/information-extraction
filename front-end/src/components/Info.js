@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Row, Col, Button} from 'react-bootstrap';
 
 export default class Info extends Component {
     render() {

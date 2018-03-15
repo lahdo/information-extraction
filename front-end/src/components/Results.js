@@ -4,6 +4,7 @@ import {Table} from 'react-bootstrap';
 export default class Results extends Component {
     render() {
         return (
+            this.props.showResults ?
             <div>
                 <h3 className="appTitle"><strong>Results</strong></h3>
                 <Table striped bordered condensed hover>
@@ -54,7 +55,7 @@ export default class Results extends Component {
                     </tr>
                     </tbody>
                 </Table>
-            </div>
+            </div> : null
         );
     }
 }

@@ -2,7 +2,7 @@ export const testResults = [
     {
         "delivery_address": "Siemens Healthcare GmbH GeschĂ¤ftsgebiet SYNGO ( Lizenzen ) Geis Industrieservice GmbH An den Sandgruben 1 91031 Forchheim",
         "po_date": "19.07.2017",
-        "items": "[{\"quantity\":\"1,000\",\"price\":\"618,00\"}]"
+        "items": [{'quantity':'1,000','price':'618,00'}]
     },
     {
         "delivery_address": "Siemens Healthcare GmbH GeschĂ¤ftsgebiet SYNGO ( Lizenzen ) Geis Industrieservice GmbH An den Sandgruben 1 91031 Forchheim",

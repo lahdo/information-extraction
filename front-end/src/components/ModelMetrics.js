@@ -4,7 +4,8 @@ import {Table} from 'react-bootstrap';
 export default class ModelMetrics extends Component {
     render() {
         return (
-            <div>
+            this.props.showResults ?
+                <div>
                 <h3 className="appTitle">More about this Machine Learning model</h3>
                 <p>Model was trained on 1000 documents. It's based on MITIE library. You can find
                     all model metrics below:</p>
@@ -50,7 +51,7 @@ export default class ModelMetrics extends Component {
                     </tr>
                     </tbody>
                 </Table>
-            </div>
+            </div>: null
         );
     }
 }
