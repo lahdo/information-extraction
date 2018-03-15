@@ -18,7 +18,7 @@ ReactDOM.render((
                 <NavigationBar />
                 <Route exact
                        name="informationExtraction"
-                       path="/"
+                       path="/information-extraction"
                        component={InformationExtraction}/>
                 <Footer />
             </Layout>
