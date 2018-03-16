@@ -16,16 +16,28 @@ export default class AppsView extends Component {
         super(props);
 
         this.state = {
-            document: '',
+            results: {},
             showResults: false,
             showSpinner: false,
         };
 
         this.setSpinner = this.setSpinner.bind(this);
+        this.setResults = this.setResults.bind(this);
+        this.uploadAnother = this.uploadAnother.bind(this);
     }
 
     setSpinner(value) {
         this.setState({"showSpinner": value});
+    }
+
+    setResults(value) {
+        this.setState({"results": value});
+        this.setState({"showResults": true});
+    }
+
+    uploadAnother() {
+        this.setState({"results": {}});
+        this.setState({"showResults": false});
     }
 
     render() {
@@ -35,25 +47,31 @@ export default class AppsView extends Component {
                 <Grid>
                     <Row>
                         <Col md={12} mdOffset={0}>
-                            <Info/>
+                            <Info />
                         </Col>
                     </Row>
                     <Row>
                         <Col md={12} mdOffset={0}>
-                            <Documents/>
+                            <Documents
+                                showResults={ this.state.showResults }
+                            />
                         </Col>
                     </Row>
                     <Row>
                         <Col md={12} mdOffset={0}>
                             <Upload
+                                showResults={ this.state.showResults }
                                 setSpinner={ this.setSpinner }
+                                setResults={ this.setResults }
                             />
                         </Col>
                     </Row>
                     <Row>
                         <Col md={8} mdOffset={0}>
                             <Results
+                                results={ this.state.results }
                                 showResults={ this.state.showResults }
+                                uploadAnother={ this.uploadAnother }
                             />
                         </Col>
                     </Row>
