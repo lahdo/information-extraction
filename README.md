@@ -19,6 +19,6 @@ Tools needed to run this app:
 ### Tasks
 Here's a list of available tasks:
 
-`npm start`
-`npm run build`
-`npm run deploy`
+* `npm start`
+* `npm run build`
+* `npm run deploy`
