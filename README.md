@@ -14,11 +14,11 @@ Tools needed to run this app:
 * `npm install` to install dependencies
 
 ## Running the App
-npm start
+`npm start`
 
 ### Tasks
 Here's a list of available tasks:
 
-npm start
-npm run build
-npm run deploy
+`npm start`
+`npm run build`
+`npm run deploy`
