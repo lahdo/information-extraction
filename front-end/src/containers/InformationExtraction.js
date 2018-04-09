@@ -17,13 +17,19 @@ export default class AppsView extends Component {
 
         this.state = {
             results: {},
+            file: '',
             showResults: false,
             showSpinner: false,
         };
 
         this.setSpinner = this.setSpinner.bind(this);
+        this.setFile = this.setFile.bind(this);
         this.setResults = this.setResults.bind(this);
         this.uploadAnother = this.uploadAnother.bind(this);
+    }
+
+    setFile(value) {
+        this.setState({"file": value});
     }
 
     setSpinner(value) {
@@ -47,11 +53,6 @@ export default class AppsView extends Component {
                 <Grid>
                     <Row>
                         <Col md={12} mdOffset={0}>
-                            <Info />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={12} mdOffset={0}>
                             <Documents
                                 showResults={ this.state.showResults }
                             />
@@ -63,12 +64,14 @@ export default class AppsView extends Component {
                                 showResults={ this.state.showResults }
                                 setSpinner={ this.setSpinner }
                                 setResults={ this.setResults }
+                                setFile={ this.setFile }
                             />
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={8} mdOffset={0}>
+                        <Col md={12} mdOffset={0}>
                             <Results
+                                file={ this.state.file }
                                 results={ this.state.results }
                                 showResults={ this.state.showResults }
                                 uploadAnother={ this.uploadAnother }

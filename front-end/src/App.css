@@ -33,13 +33,33 @@ nav.nav-bar {
     color: white;
 }
 
-nav.nav-bar .navbar-brand {
-    color: white;
+nav.navbar-custom .navbar-brand  {
+    color: #797979;
+    padding: 80px 15px;
+    font-size: 50px;
 }
+
+nav.navbar-custom.navbar.navbar-default, nav.navbar-custom.navbar.navbar-default .navbar-brand:hover, nav.navbar-custom.navbar.navbar-default .navbar-brand:focus {
+    color: #797979;
+    background-color: initial;
+    border: none;
+}
+
+
 
 h1.appTitle {
     margin-bottom: 15px;
 }
+
+h3.appTitle {
+    margin-top: 30px;
+    font-size: 32px;
+}
+
+p {
+    font-size: 18px;
+}
+
 
 .page {
     background: #fff;
@@ -116,11 +136,25 @@ h1.appTitle {
     border-radius: 2px;
 }
 
+hr.customLine {
+    border: 2px solid #c5c5c5
+}
+
 .sentences-list hr {
     width: 85%;
     background-color: #E4E4E4;
     border-color: #E4E4E4;
     color: #E4E4E4;
+}
+
+.attribute {
+    color: #00ae84;
+    text-transform: uppercase;
+}
+
+.attribute-list {
+    color: #4582ec;
+    text-transform: uppercase;
 }
 
 .hidden {
@@ -223,6 +257,8 @@ table {
 
 table th {
     min-width: 110px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 table td {
@@ -232,7 +268,7 @@ table td {
 table th {
     background-color: white;
     color: #00ae84;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .table.table-condensed > thead > tr > th {
@@ -292,6 +328,11 @@ button.entityButton.btn.btn-default {
     outline: 0;
 }
 
+.main-buttons {
+    margin-top: 30px;
+}
+
+
 .main-buttons .btn {
     margin-right: 5px;
 }
@@ -335,4 +376,33 @@ button.entityButton.btn.btn-default {
 
 .siteContent {
     margin-top: 15px;
+}
+
+.diagram > img {
+    width: 70%;
+}
+
+.diagram {
+    padding: 60px 20px 40px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.explainer {
+    /*background: white;*/
+    /*padding: 40px;*/
+}
+
+.center {
+    text-align: center;
+}
+
+.demoButton {
+    margin-top: 20px
+}
+
+.info {
+    text-align: justify;
 }

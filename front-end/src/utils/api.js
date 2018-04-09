@@ -36,7 +36,8 @@ function makeFakeRequest(endpoint) {
     return function() {
         return new Promise(function(resolve, reject) {
             // console.log(testResults[0]);
-            resolve(JSON.stringify(testResults[Math.floor(Math.random() * 50) + 1  ]));
+            //resolve(JSON.stringify(testResults[Math.floor(Math.random() * 50) + 1  ]));
+            resolve(JSON.stringify(testResults[0]));
         }.bind(this));
     };
 }

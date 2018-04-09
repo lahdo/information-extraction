@@ -7,8 +7,8 @@ export default class ModelMetrics extends Component {
             this.props.showResults ?
                 <div>
                 <h3 className="appTitle">More about this Machine Learning model</h3>
-                <p>Model was trained on 1000 documents. It's based on MITIE library. You can find
-                    all model metrics below:</p>
+                <p>This custom model is based on MITIE library and Tesseract OCR engine. You can find
+                    specific model's metrics below:</p>
                 <Table striped bordered condensed hover>
                     <thead>
                     <tr>

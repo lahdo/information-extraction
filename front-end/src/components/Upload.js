@@ -28,6 +28,7 @@ export default class Upload extends Component {
     onUploadButtonClick(e) {
         e.preventDefault(); // Stop form submit
         this.fileUpload(this.state.file);
+        //this.props.setFile(this.state.file);
     }
 
     getBase64(file, cb) {
@@ -43,7 +44,8 @@ export default class Upload extends Component {
 
     fileUpload(file) {
         this.getBase64(file, function (result) {
-            this.extractInformation(result)
+            this.props.setFile(result);
+            this.extractInformation(result);
         }.bind(this));
 
     }
@@ -74,6 +76,7 @@ export default class Upload extends Component {
                                 type="file"/>
                         </FormGroup>
                         <Button type="submit"
+                                bsSize="large"
                                 bsStyle="primary"
                                 onClick={ this.onUploadButtonClick }>
                             Upload document
